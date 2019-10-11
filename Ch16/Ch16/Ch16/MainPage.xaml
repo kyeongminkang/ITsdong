@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch16"
+             x:Class="Ch16.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="lbl01" Text="Welcome!" Font="30" >
+            <Label.TextColor>
+                <Color>
+                    <x:Arguments>
+                        <!-- 생성자의 매개변수 
+                    lbl01.TextColor = new Color(1, 0, 0); -->
+                        <x:Double>1</x:Double>
+                        <x:Double>0</x:Double>
+                        <x:Double>0</x:Double>
+                    </x:Arguments>
+                </Color>
+            </Label.TextColor>
+
+
+
+        </Label>
+        <Label x:Name="lbl02" Text="Welcome!" Font="30" >
+            <Label.TextColor>
+                <Color>
+                    <x:Arguments>
+                        <!-- 생성자의 매개변수 
+                    lbl01.TextColor = new Color(1, 0, 0); -->
+                        <x:Double>0</x:Double>
+                        <x:Double>0</x:Double>
+                        <x:Double>1</x:Double>
+                        <x:Double>0.5</x:Double>
+                    </x:Arguments>
+                </Color>
+            </Label.TextColor>
+        </Label>
+
+        <!--<Label Text="Welcome!" Font="30">
+            <Label.TextColor>
+                <Color x:FactoryMethod="FromRgb">
+                    <x:Arguments>
+                        <x:Double>0</x:Double>
+                        <x:Double>1</x:Double>
+                        <x:Double>0</x:Double>
+                    </x:Arguments>
+                </Color>
+            </Label.TextColor>
+        </Label>
+        
+        지원안함. double말고 int32형 선언시에는 255써줘야 함! 나머지는 동일-->
+
+
+
+    </StackLayout>
+</ContentPage>

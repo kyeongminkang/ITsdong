@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch14_02"
+             x:Class="Ch14_02.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                        iOS="0, 20, 0, 0"/>
+        <!--<StackLayout>
+        -->
+    <!-- Place new controls here -->
+    <!--
+        <Label x:Name="lbl01" Text="Welcome to Xamarin.Forms!" />
+        <Label x:Name="lbl02" Text="Welcome to Xamarin.Forms!" />
+        <Button x:Name="btn01" Text="클릭" />
+    </StackLayout>-->
+
+
+    <!-- obj/debug/확장명이 g.cs파일이 있음.
+    C# 프리 컴파일러가 자물을 c#으로 만들어줌
+    이 파일을 cs에서 합쳐짐 -->
+    </ContentPage.Padding>
+    <Label x:Name="lbl01" Text="Welcome to Xamarin.Forms!">
+        <!--<Label.Margin>
+            
+        </Label.Margin>-->
+        
+        
+        
+    </Label>
+
+</ContentPage>

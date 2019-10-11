@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch14_02.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button>
+                <Button.Text>
+신규고객
+등록
+                </Button.Text>
+            </Button>
+            
+            <!-- 줄바꿈시, 물론 코드는 개행처리하면 되지만 저렇게 왼쪽으로 딱 붙여 써도 줄 바꿔줌 -->
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

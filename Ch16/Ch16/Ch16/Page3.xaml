@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch16.Page3"
+             xmlns:local="clr-namespace:Ch16"
+             Padding="10"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!-- 유저가 만든 컨텐츠 뷰 만들어보기 
+            네임스페이스 위에서 알려주기-->
+                <local:Cust>
+                    <x:Arguments>
+                        <x:string>이름</x:string>
+                        <x:string>상호</x:string>
+                        <x:string>전화</x:string>
+                        <x:string>핸드폰</x:string>
+                    </x:Arguments>
+                </local:Cust>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+                <local:Cust Name="홍길동" Corp="한국전자" Tel="02-1111-1234" Hphone="010-1111-1111"/>
+                <local:Cust Name="이순신" Corp="서울전산" Tel="02-2222-1234" Hphone="010-2222-2222"/>
+                <local:Cust Name="김유신" Corp="경기전자" Tel="02-3333-1234" Hphone="010-3333-3333"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

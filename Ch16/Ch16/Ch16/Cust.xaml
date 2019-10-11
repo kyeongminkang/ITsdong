@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch16.Cust">
+
+    <Frame HasShadow="True" Padding="5">
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="lblName" Text="홍길동" FontSize="16" HorizontalOptions="StartAndExpand"/>
+            <Label x:Name="lblCorp" Text="한국전자" FontSize="16" HorizontalOptions="StartAndExpand"/>
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <Label x:Name="lbltel" Text="02-1234-1234" FontSize="10" />
+                <Label x:Name="lblhphone" Text="010-1234-1234" FontSize="10"/>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+
+</ContentView>

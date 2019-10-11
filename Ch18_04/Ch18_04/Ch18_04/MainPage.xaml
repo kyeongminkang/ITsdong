@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch18_04"
+             x:Class="Ch18_04.MainPage"
+             Padding="20">
+
+    <StackLayout>
+        <Button x:Name="btnC4" Text="도" VerticalOptions="FillAndExpand"
+              StyleId="C4" />
+        <Button x:Name="btnD4" Text="레" VerticalOptions="FillAndExpand"
+              StyleId="D4" />
+        <Button x:Name="btnE4" Text="미" VerticalOptions="FillAndExpand"
+              StyleId="E4" />
+        <Button x:Name="btnF4" Text="파" VerticalOptions="FillAndExpand"
+              StyleId="F4" />
+        <Button x:Name="btnG4" Text="솔" VerticalOptions="FillAndExpand"
+              StyleId="G4" />
+        <Button x:Name="btnA5" Text="라" VerticalOptions="FillAndExpand"
+              StyleId="A5" />
+        <Button x:Name="btnB5" Text="시" VerticalOptions="FillAndExpand"
+              StyleId="B5" />
+        <Button x:Name="btnC5" Text="도" VerticalOptions="FillAndExpand"
+              StyleId="C5" />
+
+    </StackLayout>
+
+</ContentPage>
