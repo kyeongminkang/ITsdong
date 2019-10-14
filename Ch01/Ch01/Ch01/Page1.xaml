@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch01.Page1">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <!--
+            디폴트 0~1
+            minimum < maximum
+            먼저 min값을 넣을 경우 max까지 1로 먹힘
+            max 먼저 쓸것
+            이벤트핸들러를 먼저해줘야함!
+            -->         
+            <Slider x:Name="sld01" 
+            VerticalOptions="CenterAndExpand" 
+                ValueChanged="Sld01_ValueChanged"
+                    Maximum="100"
+                    Minimum="1"/>
+            <Label x:Name="lbl01" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

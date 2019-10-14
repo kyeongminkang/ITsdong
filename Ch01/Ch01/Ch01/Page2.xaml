@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch01.Page2" Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView x:Name="bv01" VerticalOptions="FillAndExpand" />
+
+            <Slider x:Name="sldRed" Maximum="255"
+                    HorizontalOptions="FillAndExpand"
+                    ValueChanged="SldRed_ValueChanged"/>
+            <Label x:Name="lblRed" TextColor="Red"></Label>
+
+
+            <Slider x:Name="sldGreen" Maximum="255"
+                    HorizontalOptions="FillAndExpand"
+                    ValueChanged="SldGreen_ValueChanged"/>
+            <Label x:Name="lblGreen" TextColor="Green"></Label>
+
+
+            <Slider x:Name="sldBlue" Maximum="255"
+                    HorizontalOptions="FillAndExpand"
+                    ValueChanged="SldBlue_ValueChanged"/>
+            <Label x:Name="lblBlue" TextColor="Blue"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

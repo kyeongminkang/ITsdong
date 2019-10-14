@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ch05"
+             x:Class="ch05.MainPage"
+             Padding="20"
+             Appearing="ContentPage_Appearing">
+
+    <StackLayout>
+        <Label Text="아이디 : " />
+        <Frame Padding="0,0,0,-10" CornerRadius="5" BackgroundColor="#a0a0a0">
+            <Entry x:Name="txtID" Margin="0, -10, 0, 0"
+               Placeholder="아이디 혹은 이메일 입력"
+               Completed="TxtID_Completed" BackgroundColor="#a0a0a0"/>
+        </Frame>
+        <Label Text="암호 :" Margin="0, 20, 0, 0" />
+        <Entry x:Name="txtPWD" Margin="0, -10, 0, 0"
+               IsPassword="True"
+               Completed="TxtPWD_Completed"
+               Placeholder="비밀번호 입력"/>
+
+
+        <Button x:Name="btnLogin" Text="로그인" Margin="0, 20, 0, 0" Clicked="BtnLogin_Clicked"/>
+        <Button Text="회원가입" />
+        <Entry />
+        <!-- 아이폰의 경우는 scrollview로 올려줘야 함
+        키패드가 저절로 올라가지 않기 때문에-->
+    </StackLayout>
+
+</ContentPage>

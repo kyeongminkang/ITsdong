@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch01.Page6">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <Label x:Name="lbl01" Text="as adsff adfs asdfdsaf adfasf af dasdasd"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Label Text="Italic:" />
+                    <Switch x:Name="swItalic" Toggled="SwItalic_Toggled" />
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Label Text="Bold:" />
+                    <Switch x:Name="swIBold" Toggled="SwIBold_Toggled" />
+                </StackLayout>
+
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

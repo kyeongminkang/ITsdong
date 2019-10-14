@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch05.Page1"
+             Padding="10">
+
+    <ScrollView>
+        <StackLayout>
+            
+            
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Default" Placeholder="Default"
+                   TextColor="Red"
+                   TextChanged="Entry_TextChanged"
+                   Completed="Entry_Completed"/>
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Text" Placeholder="Text" />
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Chat" Placeholder="Chat" />
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Url" Placeholder="Url" />
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Email" Placeholder="Email" />
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Telephone" Placeholder="Telephone" />
+            <Entry VerticalOptions="CenterAndExpand" Keyboard="Numeric" Placeholder="Numeric" />
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

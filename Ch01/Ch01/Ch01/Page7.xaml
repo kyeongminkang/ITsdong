@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch01.Page7"
+             xmlns:local ="clr-namespace:Ch01"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--유니코드 값 \u2610 단 자물에선 &#x숫자 , 순서로 체크 없고 체크 하나 체크 둘 표시임-->
+            <!--<Label Text="&#x2610;" />
+            <Label Text="&#x2611;" />
+            <Label Text="&#x2612;" />-->
+            <local:MyCheckBox x:Name="chk01"
+                              Text="이메일 수신 동의"
+                              CheckedChanged="Chk01_CheckedChanged"/>
+            <Entry x:Name="txtEMail" IsVisible="False"
+                   Placeholder="이메일을 입력해주세요" />
+
+            <Button x:Name="btn01" Clicked="Btn01_Clicked" Text="주문"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

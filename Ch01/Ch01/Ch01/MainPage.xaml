@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch01"
+             x:Class="Ch01.MainPage"
+             >
+
+    <StackLayout Padding="10">
+        <Slider x:Name="sld01" 
+            VerticalOptions="CenterAndExpand" 
+                ValueChanged="Sld01_ValueChanged"/>
+        <Label x:Name="lbl01" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>
