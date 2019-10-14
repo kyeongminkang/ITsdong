@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ch21"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Ch21.MainPage">
+
+    <StackLayout>
+        <Button Text="버튼" />
+
+        <Button BorderWidth="{x:Static sys:Math.PI}" BorderColor="Red" Text="버튼"></Button>
+
+
+        <!-- Place new controls here -->
+        <Label x:Name="lbl01" Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center" 
+              TextColor="Blue" 
+               FontSize="{x:Static local:GBConst.ContentFontSize}"/>
+
+        <!--<Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center">
+            <Label.VerticalOptions>
+                <x:StaticExtension Member="LayoutOptions.Center">
+                </x:StaticExtension>
+            </Label.VerticalOptions>
+            <Label.TextColor>
+                <x:StaticExtenion Member="Color.Blue">
+                    
+                </x:StaticExtenion>
+            </Label.TextColor>
+        </Label>-->
+
+        <Label Text="Welcome to Xamarin.Forms!" 
+           FontSize="{x:Static local:GBConst.ContentFontSize}"
+               HorizontalOptions="Center">
+            <Label.VerticalOptions>
+                <x:Static Member="LayoutOptions.Center">
+                </x:Static>
+            </Label.VerticalOptions>
+            <Label.TextColor>
+                <x:Static Member="Color.Blue">
+                </x:Static>
+            </Label.TextColor>
+        </Label>
+
+        <Label Text="Welcome to Xamarin.Forms!" 
+           FontSize="{x:Static local:GBConst.ContentFontSize}"
+               HorizontalOptions="Center"
+               VerticalOptions="{x:Static Member=LayoutOptions.Center}"
+               TextColor="{x:Static Member=Color.Blue}"
+               BackgroundColor="{x:Static local:GBConst.ContentBackgroundColor}">
+        </Label>
+
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+               VerticalOptions="{x:Static LayoutOptions.Center}"
+               TextColor="{x:Static Color.Blue}">
+        </Label>
+    </StackLayout>
+
+</ContentPage>

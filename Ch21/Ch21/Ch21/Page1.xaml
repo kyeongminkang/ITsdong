@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ch21.Page1">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="horiOpt">CenterAndExpand</LayoutOptions>
+            <Color x:Key="textColor">Red</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="1.Welcome to Xamarin.Forms!"
+                   BackgroundColor="Yellow"
+                VerticalOptions="FillAndExpand"
+                   HorizontalOptions="{StaticResource Key=horiOpt}"
+                   TextColor="{StaticResource Key=textColor}"
+                 />
+
+            <Label Text="2.Welcome to Xamarin.Forms!"
+                   BackgroundColor="Green"
+                VerticalOptions="FillAndExpand"
+                   HorizontalOptions="{StaticResource Key=horiOpt}"
+                 TextColor="{StaticResource Key=textColor}"
+                   />
+            
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Color x:Key="textColor">Yellow</Color>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <Label Text="2-1. Xamarin.Forms!"
+                   BackgroundColor="Green"
+                VerticalOptions="FillAndExpand"
+                   HorizontalOptions="{StaticResource Key=horiOpt}"
+                 TextColor="{StaticResource Key=textColor}"
+                   />
+                <Label Text="2-2. Xamarin.Forms!"
+                   BackgroundColor="Green"
+                VerticalOptions="FillAndExpand"
+                   HorizontalOptions="{StaticResource Key=horiOpt}"
+                 TextColor="{StaticResource Key=textColor}"
+                   />
+
+            </StackLayout>
+            
+
+            <Label Text="3.Welcome to Xamarin.Forms!"
+                   BackgroundColor="Blue"
+                VerticalOptions="FillAndExpand"
+                   HorizontalOptions="{StaticResource Key=horiOpt}"
+                   TextColor="{StaticResource Key=textColor}"
+                 />
+
+            <Label Text="고객관리" FontSize="{StaticResource Key=MainTitleFontSize}"></Label>
+            <Label Text="학력정보" FontSize="{StaticResource Key=SubTitleFontSize}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
