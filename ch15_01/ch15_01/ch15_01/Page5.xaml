@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch15_01.Page5">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Large"/>
+            </Style>
+            <Style x:Key="buttonStyle1" TargetType="Button"
+                   BasedOn="{StaticResource baseStyle}">
+
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="TextColor" Value="Red" />
+
+            </Style>
+
+            <Style x:Key="buttonStyle2" TargetType="Button"
+                   BasedOn="{StaticResource baseStyle}">
+
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="Green" />
+
+            </Style>
+
+            <Style x:Key="buttonStyle3" TargetType="Button"
+                   BasedOn="{StaticResource baseStyle}">
+
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="TextColor" Value="Blue" />
+
+            </Style>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        <StackLayout>
+        <Button x:Name="btn01" Text="Style1 적용" Style="{DynamicResource buttonStyle}" 
+                Clicked="Btn01_Clicked"/>
+        <Button x:Name="btn02" Text="Style2 적용" Style="{DynamicResource buttonStyle}" 
+                Clicked="Btn02_Clicked"/>
+        <Button x:Name="btn03" Text="Style3 적용" Style="{DynamicResource buttonStyle}" 
+                Clicked="Btn03_Clicked"/>
+
+        <Button x:Name="btnReset" Text="스타일 초기화" Clicked="BtnReset_Clicked" />
+
+    </StackLayout>
+
+</ContentPage>

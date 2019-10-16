@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch05_03.Page2">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="CenterAndExpand">
+
+                <Label Text="계약일:" 
+                       VerticalOptions="Center"/>
+                <DatePicker x:Name="dtStart"
+                            Format="yyyy-MM-dd" 
+                            VerticalOptions="Center"
+                            DateSelected="DtStart_DateSelected"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                
+            
+            <Label Text="완료일:" VerticalOptions="Center" />
+                <DatePicker x:Name="dtEnd"
+                            Format="yyyy-MM-dd"
+                            VerticalOptions="Center"
+                            DateSelected="DtEnd_DateSelected"/>
+            </StackLayout>
+
+            <Label x:Name="lbl01" Text="" 
+                   VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

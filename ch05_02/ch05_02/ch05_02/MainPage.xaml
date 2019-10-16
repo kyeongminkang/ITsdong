@@ -12,6 +12,9 @@
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
                 
+                Focused="TxtNote_Focused"
+                Unfocused="TxtNote_Unfocused"
+                
                 
                 />
         </AbsoluteLayout>

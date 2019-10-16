@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch09.Page1">
+
+    <StackLayout>
+        <Image x:Name="img01" 
+               Source="https://developer.xamarin.com/demo/IMG_1415.JPG?width=100"
+               Aspect="Fill"
+               />
+
+        <!-- 
+        aspectfit - default 비율
+        fill 채움
+        aspectfill은 채우면서 비율유지 -->
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch09.Page3"
+             xmlns:local="clr-namespace:ch09">
+    <!--<Image x:Name="img"
+          Source="ch09.Images.img01.jpg" />-->
+
+    <!-- xml은 resource를 사용할수없음(파일직접지정이 안됨) fromfile fromuri만 사용-->
+    <!--<ScrollView Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal">
+            <Image x:Name="img" Source="{local:ImageResource ch09.Images.img01.jpg}" />
+            <Image x:Name="img2" Source="{local:ImageResource ch09.Images.img01.jpg}" />
+            <Image Source="{local:ImageResource ch09.Images.img01.jpg}" />
+            <Image Source="{local:ImageResource ch09.Images.img01.jpg}" />
+            <Image Source="{local:ImageResource ch09.Images.img01.jpg}" />
+        </StackLayout>
+    </ScrollView>-->
+
+    
+    <!-- 포함 리소스와 클래스가 반드시 필요!-->
+        <StackLayout>
+        <Image x:Name="img" Source="{local:ImageResource ch09.Images.img01.jpg}" 
+                   BackgroundColor="Aqua" 
+                   HorizontalOptions="Center"
+                   WidthRequest="100" HeightRequest="100" Aspect="Fill"/>
+    </StackLayout>
+    
+</ContentPage>

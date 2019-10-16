@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ch05_03"
+             x:Class="ch05_03.MainPage">
+
+    <StackLayout>
+        <SearchBar x:Name="sb" 
+                   Placeholder="검색문자열 입력"
+                   CancelButtonColor="Blue"
+                   SearchButtonPressed="Sb_SearchButtonPressed"
+                   TextChanged="Sb_TextChanged"
+                   />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch15_01.Page3">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="baseStyle" TargetType="VisualElement">
+                <Setter Property="BackgroundColor" Value="#ffff00" />
+
+            </Style>
+
+            <Style x:Key="lableStyle" TargetType="Label"
+                   BasedOn="{StaticResource baseStyle}"
+                   >
+                
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="BackgroundColor" Value="#00ffff" />
+            </Style>
+
+            <Style x:Key="buttonStyle" TargetType="Button"
+                   BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="FontSize" Value="22" />
+
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+        <StackLayout Spacing="20" VerticalOptions="Center">
+        <Label Text="레이블01" Style="{StaticResource lableStyle}"/>
+        <Label Text="레이블02" Style="{StaticResource lableStyle}"/>
+        <Button Text="버튼01" Style="{StaticResource buttonStyle}"/>
+        <Button Text="버튼02" Style="{StaticResource buttonStyle}"/>
+    </StackLayout>
+    
+</ContentPage>

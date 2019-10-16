@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ch15_01"
+             x:Class="ch15_01.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+<!-- factorymethod 이상하게 배포시키면 또 됨 뭘까? 
+            x:FactoryMethod="FromRgb"-->
+            <Color x:Key="buttonColor">
+                <x:Arguments>
+                    <x:Double>0.5</x:Double>
+                    <x:Double>0.2</x:Double>
+                    <x:Double>0</x:Double>
+                </x:Arguments>
+            </Color>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="{StaticResource buttonColor}" />
+                <Setter Property="BorderWidth" Value="3" />
+                <!--HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                FontSize="Large"
+                TextColor="Red"
+                BorderWidth="3"-->
+            </Style>
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Button Text="하나" 
+               Style="{StaticResource buttonStyle}" />
+        <Button Text="둘" 
+               Style="{StaticResource buttonStyle}"
+                FontSize="22"
+                TextColor="Red"/>
+        <Button Text="셋" 
+              Style="{StaticResource buttonStyle}" />
+        
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch15_01.Page1">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="frameStyle" TargetType="Frame">
+                <Setter Property="HasShadow" Value="True"/>
+                <!--<Setter Property="Content">
+                    <Setter.Value>
+                        <Label Text="상품정보" />
+                    </Setter.Value>
+                </Setter>-->
+                <Setter Property="BackgroundColor" Value="#00ffff" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <!--<Frame HasShadow="True">
+            <Frame.Content>
+
+
+                <Label Text="상품정보" />
+            </Frame.Content>
+        </Frame>
+
+        <Frame HasShadow="True">
+            <Label Text="상품정보" />
+        </Frame>
+
+        <Frame HasShadow="True">
+            <Label Text="상품정보" />
+        </Frame>
+
+        <Frame HasShadow="True">
+            <Label Text="상품정보" />
+        </Frame>-->
+
+        <Frame Style="frameStyle" >
+            <Label Text="상품정보" />
+        </Frame>
+
+        <Frame Style="frameStyle" >
+            <Label Text="상품정보" />
+        </Frame>
+
+        <Frame Style="frameStyle" >
+            <Label Text="상품정보" />
+        </Frame>
+
+        <Frame Style="frameStyle" >
+            <Label Text="상품정보" />
+        </Frame>
+
+        <!-- lable, button은 직접 쓸 수 없음!-->
+    </StackLayout>
+</ContentPage>

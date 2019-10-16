@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ch09"
+             x:Class="ch09.MainPage">
+    <StackLayout>
+        <Image x:Name="img01" Source="https://www.lawliberty.org/wp-content/uploads/2017/12/AdobeStock_105994137-1024x680.jpeg"
+                            VerticalOptions="Center"
+               HorizontalOptions="Center"
+           SizeChanged="Image_SizeChanged"
+               BackgroundColor="Aqua"
+           />
+
+        <Label x:Name="lbl01" />
+    </StackLayout>
+
+</ContentPage>
