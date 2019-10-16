@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cha05_01.Page7"
+             Padding="10">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Source={x:Reference sld01}, Path=Value,
+                 StringFormat='국어:{0:F0}점'
+               
+                }"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Slider x:Name="sld01"
+                    Maximum="100"
+                    Minimum="0" 
+                    />
+
+            <Label Text="{Binding Source={x:Reference txt01}, Path=Text,
+                StringFormat='그는 말했습니다. &#x201c;{0}&#x201d;'}"
+                  
+                   />
+            <Entry x:Name="txt01" />
+
+
+            <Label Text="{Binding Source={x:Reference sw01}, Path=IsToggled, StringFormat='이메일 수신 동의:{0}'}" 
+                   
+                   />
+            <Switch x:Name="sw01" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

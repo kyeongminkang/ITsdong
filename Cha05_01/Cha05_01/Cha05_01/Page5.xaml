@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cha05_01.Page5"
+             Padding="10"
+             BackgroundColor="#dddddd">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtUrl"
+                   Placeholder="URL을 입력해주세요" 
+                   Completed="TxtUrl_Completed"
+                   BackgroundColor="#ffffff"
+                   />
+
+            <StackLayout Orientation="Horizontal"
+                         BindingContext="{x:Reference wv}">
+                <Button x:Name="btnBack" Text="◀" 
+                        HorizontalOptions="FillAndExpand"
+                     IsEnabled="{Binding CanGoBack}" 
+                        Clicked="BtnBack_Clicked"
+                        />
+                <Button x:Name="btnForward" Text="▶" 
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding CanGoForward}"
+                        Clicked="BtnForward_Clicked"
+                        />
+            </StackLayout>
+
+            <WebView x:Name="wv"
+                     VerticalOptions="FillAndExpand"
+                     Source="http://www.gogle.co.kr" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

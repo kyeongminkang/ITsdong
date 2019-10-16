@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha05_01"
+             x:Class="Cha05_01.Page8">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IntToBoolConverter x:Key="intToBool" />
+            <local:BoolToStringConverter x:Key="boolToString" 
+                                 TrueString="예"
+                                         FalseString="아니요"/>
+            <local:BoolToColorConverter x:Key="boolToColor"
+                                        TrueColor="#0000ff"
+                                        FalseColor="#ff0000" />
+            <local:BoolToObjectConverter x:Key="boolToObjectString"
+                                         x:TypeArguments="x:String"
+                                         TrueObject="예"
+                                         FalseObject="아니요"
+                                         />
+            <local:BoolToObjectConverter x:Key="boolToObjectColor"
+                                         x:TypeArguments="Color"
+                                         TrueObject="#0000ff"
+                                         FalseObject="#ff0000" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
+    <ContentPage.Content>
+
+
+
+        <StackLayout>
+            <Entry x:Name="txt01"
+                   Text=""/>
+            <Button Text="다음"
+                    IsEnabled="{Binding Source={x:Reference txt01}, Path=Text.Length,
+                Converter={StaticResource intToBool}}" />
+
+            <Label Text="{Binding Source={x:Reference sw01}, Path=IsToggled,
+                StringFormat='이메일수신동의:{0}',
+                Converter={StaticResource boolToString}}" />
+            <Switch x:Name="sw01" />
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="모임참석 여부 : " />
+                <!-- convert 객체화시키기 위해서 하위탭으로 뽑아주면 됨! -->
+                <Label TextColor="{Binding Source={x:Reference sw02}, Path=IsToggled, Converter={StaticResource boolToColor}}">
+                    <Label.Text>
+                        <Binding Source="{x:Reference sw02}" Path="IsToggled" >
+                            <Binding.Converter>
+                                <local:BoolToStringConverter TrueString="참석" FalseString="불참석" />
+                            </Binding.Converter>
+                        </Binding>
+
+                    </Label.Text>
+
+                </Label>
+            </StackLayout>
+            <Switch x:Name="sw02" />
+
+            <Label Text="{Binding Source={x:Reference sw03}, Path=IsToggled,
+                StringFormat='개인정보 사용동의:{0}',
+                Converter={StaticResource boolToObjectString}}" 
+                   TextColor="{Binding Source={x:Reference sw03}, Path=IsToggled, Converter={StaticResource boolToObjectColor}}"
+                   />
+            <Switch x:Name="sw03"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

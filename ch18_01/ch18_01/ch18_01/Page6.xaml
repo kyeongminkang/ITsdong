@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch18_01.Page6"
+             Padding="10">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="BackgroundColor" Value="#404040" />
+                <Setter Property="TextColor" Value="#efefef" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid RowSpacing="2" ColumnSpacing="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="2"
+               BackgroundColor="#303030"/>
+
+        <Label x:Name="lblDisp" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               FontSize="Large"
+               LineBreakMode="HeadTruncation"
+               HorizontalOptions="End" 
+               VerticalOptions="Center"
+               BackgroundColor="#303030"
+               Text=""
+               TextColor="#ffff40"
+               Margin="5"
+               />
+
+        <Button x:Name="btnBack" Grid.Row="0" Grid.Column="2"
+                Text="&#x21e6;"
+                IsEnabled="False"
+                FontSize="30"
+                Clicked="BtnBack_Clicked" />
+
+        
+        <Button Grid.Row="1" Grid.Column="0"
+                Text="7" StyleId="7"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="1" Grid.Column="1"
+                Text="8" StyleId="8"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="1" Grid.Column="2"
+                Text="9" StyleId="9"
+                Clicked="Button_Clicked" />
+
+        
+        
+        <Button Grid.Row="2" Grid.Column="0"
+                Text="4" StyleId="4"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="2" Grid.Column="1"
+                Text="5" StyleId="5"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="2" Grid.Column="2"
+                Text="6" StyleId="6"
+                Clicked="Button_Clicked" />
+
+
+        <Button Grid.Row="3" Grid.Column="0"
+                Text="1" StyleId="1"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="3" Grid.Column="1"
+                Text="2" StyleId="2"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="3" Grid.Column="2"
+                Text="3" StyleId="3"
+                Clicked="Button_Clicked" />
+
+        
+        <Button Grid.Row="4" Grid.Column="0"
+                Text="0" StyleId="0"
+                Clicked="Button_Clicked" />
+
+        <Button Grid.Row="4" Grid.Column="1"
+                Text="." StyleId="."
+                Clicked="Button_Clicked" />
+
+    
+    </Grid>
+</ContentPage>

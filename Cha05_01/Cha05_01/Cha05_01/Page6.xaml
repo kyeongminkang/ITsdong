@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cha05_01.Page6">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbl01" Text="Default" 
+                   FontSize="{Binding Source={x:Reference sld01},Path=Value}"/>
+            <Slider x:Name="sld01" 
+                    Maximum="30"
+                    Minimum="5"
+                    />
+
+            <Label Text="OneWay" 
+                   FontSize="{Binding Source={x:Reference sld02},
+                Path=Value,
+                Mode=OneWay}"/>
+            
+            <Slider x:Name="sld02" 
+                    Maximum="30"
+                    Minimum="5"/>
+
+            <Label x:Name="lbl03" Text="OneWayToSource" 
+                   FontSize="{Binding Source={x:Reference sld03},
+                Path=Value,
+                Mode=OneWayToSource}"
+                   />
+            <Slider x:Name="sld03" 
+                    Maximum="30"
+                    Minimum="5"
+                    />
+
+            <Label x:Name="lbl04" Text="TwoWay" 
+                   FontSize="{Binding Source={x:Reference sld04},
+                Path=Value,
+                Mode=TwoWay}"/>
+            <Slider x:Name="sld04"
+                    Maximum="30"
+                    Minimum="5"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

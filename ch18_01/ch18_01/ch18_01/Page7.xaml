@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ch18_01.Page7"
+             SizeChanged="ContentPage_SizeChanged">
+    <Grid x:Name="grd">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <BoxView x:Name="bv" Grid.Row="0" Grid.Column="0" />
+
+        <StackLayout x:Name="stack" Grid.Row="1" Grid.Column="0" Spacing="20" Padding="20"
+                     BackgroundColor="Aqua">
+            <Slider x:Name="slRed" ValueChanged="SlRed_ValueChanged" />
+            <Slider x:Name="slGreen" ValueChanged="SlGreen_ValueChanged" />
+            <Slider x:Name="slBlue" ValueChanged="SlBlue_ValueChanged"/>
+
+        </StackLayout>
+    </Grid>
+
+
+    
+</ContentPage>
