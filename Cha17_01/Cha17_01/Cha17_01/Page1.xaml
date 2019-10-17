@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cha17_01.Page1"
+             Padding="10">
+    <StackLayout>
+        <Picker x:Name="pic01" Title="키보드 타입"
+                SelectedIndexChanged="Pic01_SelectedIndexChanged">
+
+            <Picker.Items>
+                <x:String>Default</x:String>
+                <x:String>Text</x:String>
+                <x:String>Email</x:String>
+                <x:String>Numeric</x:String>
+                <x:String>Chat</x:String>
+                <x:String>Url</x:String>
+                <x:String>Telephone</x:String>
+            </Picker.Items>
+            <Picker.SelectedIndex>
+                6
+            </Picker.SelectedIndex>
+        </Picker>
+        
+        <Entry x:Name="txt01"
+               Placeholder="메모를 입력해주세요. "/>
+
+    </StackLayout>
+</ContentPage>

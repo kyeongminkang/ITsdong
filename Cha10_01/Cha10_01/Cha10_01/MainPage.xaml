@@ -15,7 +15,18 @@
     <StackLayout>
         <Label Text="{Binding Source={x:Static sys:DateTime.Now}}" />
 
-        <Label Text="{Binding Source={StaticResource dateTimeViewModel}, Path=Dttm}"/>
+        <Label Text="{Binding Source={StaticResource dateTimeViewModel}, Path=Dttm,
+            StringFormat='현재시간 : {0:yyy-MM-dd hh:mm:ss}'
+            }"/>
+
+        <Label Text="{Binding Source={StaticResource dateTimeViewModel}, Path=Dttm.Hour,
+            StringFormat='시 :{0}'}" />
+        <Label Text="{Binding Source={StaticResource dateTimeViewModel}, Path=Dttm.Minute,
+            StringFormat='분 :{0}'}" />
+        <Label Text="{Binding Source={StaticResource dateTimeViewModel}, Path=Dttm.Second,
+            StringFormat='초 :{0}'}" />
+        <Label Text="{Binding Source={StaticResource dateTimeViewModel}, Path=Dttm.Millisecond,
+            StringFormat='밀리초 :{0}'}" />
     </StackLayout>
 
 </ContentPage>

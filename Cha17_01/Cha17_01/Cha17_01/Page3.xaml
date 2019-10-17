@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:Cha17_01"
+             x:Class="Cha17_01.Page3">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbl01"
+                   Text="042"
+                />
+
+            <Picker x:Name="pic01">
+                <Picker.Items>
+                    <x:String>서울</x:String>
+                    <x:String>경기</x:String>
+                    <x:String>인천</x:String>
+                    <x:String>충청</x:String>
+                    <x:String>경상</x:String>
+                    <x:String>전라</x:String>
+                    <x:String>강원</x:String>
+                   
+                </Picker.Items>
+
+                <Picker.SelectedIndex>
+                    <Binding Source="{x:Reference lbl01}" Path="Text" Mode="TwoWay">
+                        <Binding.Converter>
+                            <local:ObjectToIndexConverter x:TypeArguments="x:String">
+
+                               
+                                <x:String>02</x:String>
+                                <x:String>031</x:String>
+                                <x:String>032</x:String>
+                                <x:String>042</x:String>
+                                <x:String>051</x:String>
+                                <x:String>062</x:String>
+                                <x:String>071</x:String>
+
+                            </local:ObjectToIndexConverter>
+
+
+                        </Binding.Converter>
+
+                    </Binding>
+                </Picker.SelectedIndex>
+
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

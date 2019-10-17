@@ -3,21 +3,15 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Cha10_01
+namespace Cha17_01
 {
     public partial class App : Application
     {
-        AddViewModel addViewModel;
         public App()
         {
             InitializeComponent();
 
-            addViewModel = new AddViewModel();
-
-            addViewModel.ResoreData();
-           
-            MainPage = new Page4(addViewModel);
-
+            MainPage = new Page3();
         }
 
         protected override void OnStart()
@@ -27,12 +21,12 @@ namespace Cha10_01
 
         protected override void OnSleep()
         {
-            addViewModel.SaveData();
+            // Handle when your app sleeps
         }
 
         protected override void OnResume()
         {
-            addViewModel.ResoreData();
+            // Handle when your app resumes
         }
     }
 }

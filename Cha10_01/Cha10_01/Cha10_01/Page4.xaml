@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cha10_01.Page4"
+             xmlns:local="clr-namespace:Cha10_01"
+             Padding="10">
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <local:AddViewModel x:Key="addViewModel" />
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+    
+    <!--<Grid BindingContext="{StaticResource addViewModel}">-->
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="{Binding Path=HistoryString}" FontSize="10"/>
+        <Label Grid.Row="1" Text="{Binding Path=CurrentEntry}" FontSize="22" HorizontalOptions="End" Margin="10,0" />
+
+        <Grid Grid.Row="2" Margin="10"
+              RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Text="C" 
+                    Command="{Binding ClearCommand}" />
+            <Button Grid.Row="0" Grid.Column="1" Text="CE" 
+                    Command="{Binding ClearEnterCommand}" />
+            <Button Grid.Row="0" Grid.Column="2" Text="&lt;-" 
+                    Command="{Binding BackspaceCommand}"/>
+            <Button Grid.Row="0" Grid.Column="3" Grid.RowSpan="5" Text="+"
+                    Command="{Binding AddCommand}"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Text="7" 
+                    Command="{Binding NumberCommand}" CommandParameter="7"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="8" 
+                    Command="{Binding NumberCommand}" CommandParameter="8"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="9" 
+                    Command="{Binding NumberCommand}" CommandParameter="9"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="4" 
+                    Command="{Binding NumberCommand}" CommandParameter="4"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="5" 
+                    Command="{Binding NumberCommand}" CommandParameter="5"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="6" 
+                    Command="{Binding NumberCommand}" CommandParameter="6"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Text="1" 
+                    Command="{Binding NumberCommand}" CommandParameter="1"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="2" 
+                    Command="{Binding NumberCommand}" CommandParameter="2"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="3" 
+                    Command="{Binding NumberCommand}" CommandParameter="3"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="0" 
+                    Command="{Binding NumberCommand}" CommandParameter="0" />
+            <Button Grid.Row="4" Grid.Column="2" Text="." 
+                    Command="{Binding DecimalPointCommand}"/>
+
+
+
+
+
+
+
+        </Grid>
+
+    </Grid>
+    
+</ContentPage>

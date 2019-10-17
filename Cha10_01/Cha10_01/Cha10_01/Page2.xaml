@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha10_01"
+             x:Class="Cha10_01.Page2"
+             Padding="10">
+    <Grid>
+        <Grid.BindingContext>
+            <local:ColorViewModel LocalColor="#7f7f7f"/>
+        </Grid.BindingContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+ 
+        </Grid.RowDefinitions>
+
+        <BoxView Grid.Row="0" Color="{Binding Path=LocalColor}" />
+
+        <Slider Grid.Row="1" Value="{Binding Path=Alpha}" />
+        <Slider Grid.Row="2" Value="{Binding Path=Red}"/>
+        <Slider Grid.Row="3" Value="{Binding Path=Green}"/>
+        <Slider Grid.Row="4" Value="{Binding Path=Blue}" />
+
+        <StackLayout Grid.Row="5">
+            <Label Text="{Binding Path=Alpha}" />
+            <Label Text="{Binding Path=Red}" />
+            <Label Text="{Binding Path=Green}" />
+            <Label Text="{Binding Path=Blue}" />
+         
+        </StackLayout>
+    </Grid>
+</ContentPage>

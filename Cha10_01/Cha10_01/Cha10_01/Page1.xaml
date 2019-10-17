@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha10_01"
+             x:Class="Cha10_01.Page1"
+             Padding="20">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MultipleViewModel x:Key="multipleViewModel" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout BindingContext="{StaticResource multipleViewModel}"
+                 Spacing="20">
+        <Slider Maximum="10" Minimum="0" 
+                    Value="{Binding Path=Op1, Mode=TwoWay}"/>
+        <Slider Maximum="10" Minimum="0" 
+                    Value="{Binding Path=Op2}"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding Path=Op1}" />
+            <Label Text=" x " />
+            <Label Text="{Binding Path=Op2}"/>
+            <Label Text=" = " />
+            <Label Text="{Binding Path=Result}" />
+
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

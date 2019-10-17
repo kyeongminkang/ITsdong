@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha17_01"
+             x:Class="Cha17_01.Page2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbl01"
+                   Text="안녕하세요"
+                   FontSize="16" />
+
+            <Picker x:Name="pic01">
+                <Picker.Items>
+                    <x:String>Font Size = 8</x:String>
+                    <x:String>Font Size = 10</x:String>
+                    <x:String>Font Size = 12</x:String>
+                    <x:String>Font Size = 14</x:String>
+                    <x:String>Font Size = 16</x:String>
+                    <x:String>Font Size = 18</x:String>
+                    <x:String>Font Size = 20</x:String>
+                    <x:String>Font Size = 22</x:String>
+                    <x:String>Font Size = 24</x:String>
+                    <x:String>Font Size = 26</x:String>
+                </Picker.Items>
+
+                <Picker.SelectedIndex>
+                    <Binding Source="{x:Reference lbl01}" Path="FontSize">
+                        <Binding.Converter>
+                            <local:ObjectToIndexConverter x:TypeArguments="x:Double">
+                                <x:Double>8</x:Double>
+                                <x:Double>10</x:Double>
+                                <x:Double>12</x:Double>
+                                <x:Double>14</x:Double>
+                                <x:Double>16</x:Double>
+                                <x:Double>18</x:Double>
+                                <x:Double>20</x:Double>
+                                <x:Double>22</x:Double>
+                                <x:Double>24</x:Double>
+                                <x:Double>26</x:Double>
+                            </local:ObjectToIndexConverter>
+                            
+                            
+                        </Binding.Converter>
+                        
+                    </Binding>
+                </Picker.SelectedIndex>
+                
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

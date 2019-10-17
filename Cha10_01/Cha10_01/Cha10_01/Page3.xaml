@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha10_01"
+             x:Class="Cha10_01.Page3"
+             Padding="20">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PowerViewModel x:Key="powerViewModel">
+                <x:Arguments>
+                    <x:Double>2</x:Double>
+                </x:Arguments>
+            </local:PowerViewModel>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <StackLayout BindingContext="{StaticResource powerViewModel}">
+
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding Path=Op1}" FontSize="20" />
+            <Label Text="{Binding Path=Op2}" FontSize="10" />
+            <Label Text="=" FontSize="20" />
+            <Label Text="{Binding Path=Result}" FontSize="20" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button Text="-" FontSize="30" HorizontalOptions="FillAndExpand" 
+                    Command="{Binding DecreaseCommand}"/>
+            <Button Text="+" FontSize="30" HorizontalOptions="FillAndExpand" 
+                    Command="{Binding IncreaseCommand}"/>
+
+        </StackLayout>
+        
+        
+    </StackLayout>
+    
+    
+
+
+</ContentPage>

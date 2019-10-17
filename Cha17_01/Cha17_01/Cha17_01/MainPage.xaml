@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha17_01"
+             x:Class="Cha17_01.MainPage">
+
+    <StackLayout>
+        <Label Text="지역" />
+
+
+        <Grid>
+        <Picker x:Name="pic01" Title="거주 지역을 선택해 주세요"
+                SelectedIndexChanged="Pic01_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>서울</x:String>
+                <x:String>경기</x:String>
+                <x:String>인천</x:String>
+                <x:String>강원</x:String>
+                <x:String>충청</x:String>
+                <x:String>경상</x:String>
+                <x:String>전라</x:String>
+                
+            </Picker.Items>
+            
+        </Picker>
+
+            <Label Text="▼" HorizontalOptions="End" VerticalOptions="Center"
+                   Margin="0, 0, 10, 0" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
