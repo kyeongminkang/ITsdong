@@ -11,7 +11,7 @@ namespace Cha17_01
         {
             InitializeComponent();
 
-            MainPage = new Page3();
+            MainPage = new Page14();
         }
 
         protected override void OnStart()

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha17_01"
+             x:Class="Cha17_01.Page11">
+    <ContentPage.BindingContext>
+        <local:CorpViewModel />
+    </ContentPage.BindingContext>
+    
+        <StackLayout>
+        <Label Text="{Binding StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup, StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps, StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps[0], StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps[0].Num , StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps[0].Name , StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps[0].Tel , StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps[0].Addr , StringFormat='{0}'}" />
+        <Label Text="{Binding Path=EmployeeGroup.Emps[0].Point , StringFormat='{0}'}" />
+
+        <Image Source="{Binding Path=EmployeeGroup.Emps[0].ImgUrl, StringFormat='{0}'}" />
+    </StackLayout>
+    
+</ContentPage>

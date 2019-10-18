@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Cha17_01"
+             x:Class="Cha17_01.Page14"
+             Padding="10"
+             BackgroundColor="#efefef">
+    <ContentPage.BindingContext>
+        <local:CorpViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout BackgroundColor="#ffffff">
+        <Label Text="{Binding Path=EmployeeGroup.CorpName, StringFormat='{}{0}'}" />
+        <ListView ItemsSource="{Binding Path=EmployeeGroup.Emps}"
+                  
+                  HasUnevenRows="True"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsRefreshing}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        
+                        <Grid Margin="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Source="{Binding ImgUrl}" WidthRequest="100" 
+                                   Aspect="AspectFit" />
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" 
+                                   FontSize="18" TextColor="#000000"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding Tel}" 
+                                   FontSize="14" TextColor="#7f7f7f" />
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Addr}" 
+                                   FontSize="14" TextColor="#7f7f7f"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Point, StringFormat='{}{0:F2}' }" />
+                        </Grid>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="평점 초기화" 
+                                      Command="{Binding ResetPointCommand}"/>
+                            <MenuItem Text="제일 위로" 
+                                      Command="{Binding MoveToTopCommand}"/>
+                            <MenuItem Text="제일 아래로" 
+                                      Command="{Binding MoveToBottomCommand}"/>
+                            <MenuItem Text="삭제" 
+                                      Command="{Binding RemoveCommand}"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+</ContentPage>

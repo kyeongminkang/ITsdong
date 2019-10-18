@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cha17_01.Page4">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView x:Name="bv" HeightRequest="100" />
+            <ListView x:Name="lst01"
+                      SeparatorVisibility="Default"
+                      SeparatorColor="Blue"
+                      ItemSelected="Lst01_ItemSelected"
+                      ItemTapped="Lst01_ItemTapped"
+                      />
+            <!-- separtor 구분선1-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
